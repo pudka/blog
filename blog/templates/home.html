@@ -9,15 +9,16 @@
 {% endblock %}
 
 {% block content %}
+
 <main class="container">
   <div class="row mb-2">
       {% for post in posts.items %}
-        <div class="col-md-6">
+        <div class="col-md-6 overflow-hidden">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
+            <div class="col p-4 d-flex flex-column position-static overflow-hidden">
                 <h2 class="blog-post-title">{{ post.title }}</h2>
                 <div class="mb-1 text-muted">By {{ post.author.username }} on {{ post.date_posted.strftime('%B %d, %Y') }}</div>
-                <p class="card-text mb-auto">{{ post.content }}</p>
+                <p class="card-text a" >{{ post.content }}</p>
                 <a href="{{ url_for('post', post_id=post.id) }}" class="stretched-link">Continue reading</a>
             </div>
             <div class="col-auto d-none d-lg-block">
