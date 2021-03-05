@@ -14,8 +14,6 @@ email-validator = "*"
 flask-sqlalchemy = "*"
 flask-bcrypt = "*"
 flask-login = "*"
-pil = "*"
-pillow = "*"
 
 [requires]
 python_version = "3.7"

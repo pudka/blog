@@ -18,4 +18,4 @@ __pycache__/
 *.spec
 
 # Test database
-blog/site.db
+# blog/site.db
