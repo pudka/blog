@@ -1,10 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, \
-    TextAreaField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, \
     ValidationError
-from flask_wtf.file import FileAllowed, FileField
-from flask_login import current_user
 from blog.models import User
 
 
@@ -42,12 +39,3 @@ class LoginForm(FlaskForm):
                              render_kw={"placeholder": "Password"})
     remember = BooleanField('Remember Me')
     submit = SubmitField('Sign in')
-
-
-class PostForm(FlaskForm):
-    """ Post form """
-    title = StringField('Title', validators=[DataRequired()])
-    content = TextAreaField('Content', validators=[DataRequired()])
-    submit = SubmitField('Post')
-
-
